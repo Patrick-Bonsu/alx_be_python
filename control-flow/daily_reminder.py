@@ -1,7 +1,7 @@
 
 # Prompt user for task information
-task = input("Enter your task for today: ")
-priority = input("Set the task priority (high, medium, low):")
+task = input("Enter your task for today:")
+priority = input("Set the task priority (high, medium, low)")
 time_bound = input("Is the task time-bound? (yes or no):")
 
 # Reminder message base
