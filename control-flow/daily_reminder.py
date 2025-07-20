@@ -1,8 +1,8 @@
 
 # Prompt user for task information
 task = input("Enter your task for today: ")
-priority = input("Set the task priority (high, medium, low):").lower()
-time_bound = input("Is the task time-bound? (yes or no):").lower()
+priority = input("Set the task priority (high, medium, low):")
+time_bound = input("Is the task time-bound? (yes or no):")
 
 # Reminder message base
 reminder = f"Reminder: '{task}' is a {priority.upper()} priority task"
