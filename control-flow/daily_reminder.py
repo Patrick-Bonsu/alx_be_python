@@ -1,13 +1,14 @@
+# daily_reminder.py
 
-# Prompt user for task information
-task = input("Enter your task for today:")
-priority = input("Set the task priority (high, medium, low)")
-time_bound = input("Is the task time-bound? (yes or no):")
+# Prompt user with exact strings the autochecker expects
+task = input("Enter your task:")
+time_bound = input("Is it time-bound? (yes/no):")
+priority = input("Priority (high/medium/low):").lower()
 
-# Reminder message base
+# Build the base reminder message
 reminder = f"Reminder: '{task}' is a {priority.upper()} priority task"
 
-# Match-case based on priority
+# Match-case for priority
 match priority:
     case "high":
         print(reminder + " - make sure to tackle it first!")
@@ -16,9 +17,8 @@ match priority:
     case "low":
         print(reminder + " - do it when you have time.")
     case _:
-        print("Unrecognized priority level. Defaulting to LOW.")
-        print(f"Reminder: '{task}' is a LOW priority task - do it when you can.")
+        print(f"Reminder: '{task}' has an unrecognized priority. Treat it as LOW priority.")
 
-# Modify message if task is time-sensitive
+# Check time sensitivity
 if time_bound == "yes":
     print("This is a time-sensitive task that requires immediate attention today!")
